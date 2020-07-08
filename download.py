@@ -18,8 +18,7 @@ def check_args(args):
         raise ValueError("Number of threads should be integer 1 or more")
     try:
         h, w = args.size.split('x')
-        h = int(h)
-        w = int(w)
+        h, w = int(h), int(w)
     except ValueError as e:
         print("Incorrect size format")
         raise e
